@@ -29,7 +29,7 @@ npm install
 
 ## Run
 ```
-node fileName_from_query_folder
+node index.js fileName_from_query_folder
 ```
 
 ## 📁 Project Structure
