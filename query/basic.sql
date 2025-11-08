@@ -2,7 +2,7 @@
 
 -- SELECT * FROM cars;
 
--- Select columns 
+-- Select columns
 -- SELECT brand, model, condition, year FROM cars;
 -- ======================================================== WHERE CLAUSE =======================================================
 -- SELECT brand, model, condition, price FROM cars
@@ -36,18 +36,31 @@
 -- SELECT brand, model, condition, price FROM cars
 -- 	WHERE price < 25000 OR price > 40000;
 
+/* 
 SELECT brand, model, condition, price FROM cars
-	WHERE price IN (20000, 30000, 40000);
+WHERE price IN (20000, 30000, 40000);
+*/
 
 /*
-	Select brand, model, price and sold from cars
-		filter out any cars which are sold
-		show cars where the brand is none of ('Ford', 'Triumph', 'Chevrolet', 'Dodge')
-		or the price is less than $50000
+Select brand, model, price and sold from cars
+filter out any cars which are sold
+show cars where the brand is none of ('Ford', 'Triumph', 'Chevrolet', 'Dodge')
+or the price is less than $50000
 */
-/* 
-SELECT brand, model, condition, price, sold FROM cars
-    WHERE sold = FALSE
-    AND brand IN ('Ford', 'Triumph', 'Chevrolet', 'Dodge')
+
+SELECT
+    brand,
+    model,
+    condition,
+    price,
+    sold
+FROM cars
+WHERE
+    sold = FALSE
+    AND brand IN (
+        'Ford',
+        'Triumph',
+        'Chevrolet',
+        'Dodge'
+    )
     OR price < 50000;
- */
