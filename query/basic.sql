@@ -48,6 +48,7 @@ show cars where the brand is none of ('Ford', 'Triumph', 'Chevrolet', 'Dodge')
 or the price is less than $50000
 */
 
+/* 
 SELECT
     brand,
     model,
@@ -64,3 +65,30 @@ WHERE
         'Dodge'
     )
     OR price < 50000;
+ */
+
+
+-- ======================================================== ORDER BY =======================================================
+/*
+	Select the brand, model, condition and price from cars
+		order the table by condition in descending order
+		and by price in ascending order
+*/
+
+/* 
+SELECT brand, model, condition, price FROM cars
+    ORDER BY condition DESC, price;
+ */
+
+
+/*
+		Select the brand, model, condition and price from cars
+		where the car is not sold
+		and the condition is not 5
+		order the table by condition in descending order
+		and by price in ascending order
+*/
+
+SELECT brand, model, condition, price FROM cars
+	WHERE sold IS FALSE AND condition != 5
+	ORDER BY condition DESC, price;
