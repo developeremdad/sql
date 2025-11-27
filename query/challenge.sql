@@ -37,7 +37,7 @@ or the brand is either 'Ford' or 'Triumph' and the car is from the 70s
 only select cars where sold is not true
 */
 
-
+/* 
 SELECT brand, model, year, sold
 FROM cars
 WHERE (
@@ -51,3 +51,60 @@ WHERE (
         )
     )
     AND sold IS NOT TRUE;
+ */
+
+
+ 
+/*
+		Select the brand, model, condition and price from cars
+		where the car is not sold
+		and the condition is not 5
+		order the table by condition in descending order
+		and by price in ascending order
+*/
+
+/* 
+SELECT brand, model, condition, price FROM cars
+	WHERE sold IS FALSE AND condition != 5
+	ORDER BY condition DESC, price;
+ */
+
+
+
+ /*
+	Select the brand, model, color and price from cars
+		where the color is a shade of 'red'
+		and sold is false
+		order by price
+		limit the results to 5
+*/
+
+/* 
+SELECT brand, model, color, price FROM cars
+    WHERE color = 'red'
+    AND
+    sold IS FALSE
+    limit 2;
+ */
+
+
+/*
+	Count the number of cars
+		where sold is true
+*/
+
+/* 
+SELECT COUNT(*) FROM cars
+    WHERE sold IS TRUE;
+ */
+
+
+ /*
+	Sum the price of cars
+		where sold is true
+	Use the alias total_earnings in your output
+*/
+
+
+SELECT SUM(price) as total_earnings FROM cars
+    WHERE sold IS TRUE;
