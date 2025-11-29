@@ -127,5 +127,6 @@ Group the table by brand.
 */
 
 
-SELECT brand, count(brand) AVG(price) FROM cars
+SELECT brand, count(brand), FLOOR(AVG(price)) as "AVG" FROM cars
+	WHERE sold IS FALSE
 	GROUP BY brand;
