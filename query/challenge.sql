@@ -166,7 +166,7 @@ SELECT brand, count(brand), FLOOR(AVG(price)) as "AVG" FROM cars
 	order the result by car_count
 */
 
-
+/* 
 SELECT year,
 	count(year) AS car_count,
 	MAX(price),
@@ -176,3 +176,23 @@ WHERE sold IS TRUE
 GROUP BY year
 HAVING count(year) > 1
 ORDER BY car_count;
+ */
+
+
+ /*
+	Insert these two cars to the cars table:
+		1. Brand: Chevrolet, model: Bel Air, year: 1955,
+			retail_price: 50000, color: purple, condition 5, sold: false
+		2. Brand: Porsche, model: 944 Turbo, year: 1986,
+			retail_price: 48000, color: white, condition: 4, sold: false
+*/
+
+-- INSERT INTO cars (
+-- 	brand, model, year, price, color, condition, sold
+-- ) VALUES (
+-- 	'Chevrolet', 'Bel Air', 1955, 50000, 'purple', 5, FALSE
+-- ), (
+-- 	'Porsche', '944 Turbo', 1986, 48000, 'white', 4, FALSE
+-- );
+
+-- SELECT * from cars;
